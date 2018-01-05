@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['192.168.56.6']  # make it accessible from outside
 
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 # Application definition
 
