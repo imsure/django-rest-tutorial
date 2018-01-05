@@ -30,5 +30,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^quickstart/', include(router.urls)),  # quickstart app
     url(r'^', include('snippets.urls')),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls')),
+    # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
