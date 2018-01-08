@@ -25,7 +25,9 @@ SECRET_KEY = 'x3j!d-&!xen247a0gd76)+ydws@7_f$6+2m#bvp6wuw*$g9dd7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.56.6']  # make it accessible from outside
+# make it accessible from both inside & outside when running:
+# $ python3 manage.py runserver 0.0.0.0:8000
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.56.6']
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
